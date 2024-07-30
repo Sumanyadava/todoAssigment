@@ -12,7 +12,7 @@ const TodoList = () => {
   }, [dispatch]);
 
   return (
-    <ul>
+    <ul className='flex flex-col justify-center items-center w-full'>
       {todos.map((todo) => (
         <TodoItem key={todo.id} todo={todo} />
       ))}

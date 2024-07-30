@@ -24,7 +24,7 @@ const todoPost = async (req, res) => {
     res.json(savedTodo);
   } catch (error) {
     console.log(error);
-    res.json({ message: "failed as todo" });
+    res.json({ message: "failed as todo" }); 
   }
 };
 

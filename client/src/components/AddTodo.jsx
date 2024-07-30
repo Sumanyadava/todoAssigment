@@ -15,13 +15,15 @@ const AddTodo = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className=' flex  justify-center gap-5'>
       <input
+      className='input input-bordered w-[60%]'
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
       />
-      <button type="submit">Add Todo</button>
+      <button className='btn btn-primary' type="submit">Add Todo</button>
+      
     </form>
   );
 };

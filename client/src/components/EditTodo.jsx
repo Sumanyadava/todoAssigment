@@ -14,16 +14,19 @@ const EditTodo = ({ todo, cancelEdit }) => {
   };
 
   return (
-    <>
-    {console.log("edit",todo)}
+    <div className='flex justify-between  m-3 w-[80%] bg-white p-3 rounded-lg '>
+    
       <input
         type="text"
         value={editText}
+        className='text-4xl input input-bordered m-2 '
         onChange={(e) => setEditText(e.target.value)}
       />
-      <button onClick={handleSave}>Save</button>
-      <button onClick={cancelEdit}>Cancel</button>
-    </>
+      <div className="btn_wrap flex gap-3">
+      <button onClick={handleSave} className='btn btn-secondary'>Save</button>
+      <button onClick={cancelEdit} className='btn btn-error'>Cancel</button>
+      </div>
+    </div>
   );
 };
 
