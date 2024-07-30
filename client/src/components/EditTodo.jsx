@@ -1,7 +1,6 @@
-// src/components/EditTodo.jsx
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { editTodo } from "../todoSlice.js";
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { editTodo } from '../todoSlice';
 
 const EditTodo = ({ todo, cancelEdit }) => {
   const [editText, setEditText] = useState(todo.text);
@@ -9,13 +8,14 @@ const EditTodo = ({ todo, cancelEdit }) => {
 
   const handleSave = () => {
     if (editText.trim()) {
-      dispatch(editTodo({ id: todo.id, text: editText }));
+      dispatch(editTodo({ id: todo._id, text: editText }));
       cancelEdit();
     }
   };
 
   return (
     <>
+    {console.log("edit",todo)}
       <input
         type="text"
         value={editText}
