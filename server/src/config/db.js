@@ -3,7 +3,7 @@ import  dotenv  from 'dotenv';
 
 dotenv.config()
 //change db name accordingly
-const db_name = "/todo"
+const db_name = "todo"
 
 const connectDB = async () => {
     try {
